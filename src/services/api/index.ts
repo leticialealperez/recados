@@ -1,7 +1,7 @@
 import { Axios } from 'axios';
 
 const ApiRequest = new Axios({
-  baseURL: 'https://recados-api-revisao.onrender.com',
+  baseURL: process.env.BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },
