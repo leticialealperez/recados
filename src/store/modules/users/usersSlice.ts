@@ -40,8 +40,6 @@ export const { selectAll: selectUsers, selectById:selectUsersByEmail } = userAda
 export const buscarUsuariosAPI = createAsyncThunk('users/getUsers', async () => {
   const respostaApi = await ApiRequest.get('/users')
 
-  console.log(respostaApi);
-
   const dataParsed = JSON.parse(respostaApi.data);
 
   return dataParsed;

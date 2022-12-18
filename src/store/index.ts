@@ -1,21 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
 
 import rootReducer from './rootReducer';
 
-const persistConfig = {
-  key: 'recados',
-  storage,
-};
-
-const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = configureStore({
   reducer: rootReducer,
 });
-
-export const persistor = persistStore(store);
 
 // captura dos tipos das entidades salvas na nossa store
 export type RootState = ReturnType<typeof store.getState>;
