@@ -1,11 +1,11 @@
 import { Axios } from 'axios';
 
 const ApiRequest = new Axios({
-  baseURL: 'http://localhost:8080',
+  baseURL: 'https://recados-api-revisao.onrender.com',
   headers: {
     'Content-Type': 'application/json',
   },
-  responseType: 'json'
+  responseType: 'json',
 });
 
 export { ApiRequest };
